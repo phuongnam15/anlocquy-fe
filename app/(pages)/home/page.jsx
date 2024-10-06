@@ -136,18 +136,18 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col gap-40">
-      <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 w-full justify-center px-20 md:px-24 lg:px-[20rem] gap-4 md:gap-10 lg:gap-16 xl:gap-24">
+      <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 w-full justify-center px-10 sm:px-20 md:px-24 lg:px-40 gap-10 md:gap-10 lg:gap-16 xl:gap-20">
         {listCard.map((item, index) => {
           return (
             <div
               key={index}
               className="flex flex-col items-center row-span-2 xl:gap-4"
             >
-              <div className="relative w-24 h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 bg-white border-[#C09440] border-[3px] rounded-tl-[50%] rounded-br-[50%] mb-2">
+              <div className="relative w-24 h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36 2xl:w-44 2xl:h-44 bg-white border-[#C09440] border-[3px] rounded-tl-[50%] rounded-br-[50%] mb-2">
                 <Image
                   src={item.icon}
                   alt="phat"
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-20 xl:h-20 2xl:w-16 2xl:h-16"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-20 xl:h-20 2xl:w-[5rem] 2xl:h-[5rem]"
                 />
               </div>
               <h1 className="font-semibold text-white self-start text-center w-full xl:text-xl">
