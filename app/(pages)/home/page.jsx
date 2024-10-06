@@ -451,12 +451,12 @@ const HomePage = () => {
       {/* projects */}
       <div className="flex items-center flex-col gap-10">
         <h1 className="text-white text-3xl font-DFVN-1">CÁC DỰ ÁN NỔI BẬT</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-8">
           {projects.map((item, index) => (
             <div
               key={index}
               className="overflow-hidden relative border-2 outline-none border-[#FEDC92] 
-                   w-[18rem] md:w-[20rem] lg:w-[24.5rem] h-[25rem] lg:h-[30rem] rounded-s-[60px] rounded-tr-[60px]"
+                   w-[18rem] md:w-[20rem] 2xl:w-[24.5rem] h-[25rem] 2xl:h-[30rem] rounded-s-[60px] rounded-tr-[60px]"
             >
               <div
                 className="bg-project bg-[length:410px_90px] absolute bottom-0 z-10 w-full 
