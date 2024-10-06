@@ -32,14 +32,25 @@ const Introduce = () => {
       <div className="w-full relative z-10 bg-[#2b2f26]">
         <div className="w-full relative overflow-hidden">
           <div
-            className={`flex  ${currentIndex == 0 ? "transition-all duration-1500" : "transition-all duration-500"}`}
+            className={`flex ${
+              currentIndex == 0
+                ? "transition-all duration-1500"
+                : "transition-all duration-500"
+            }`}
             style={{
               transform: `translateX(-${currentIndex * 100}%)`,
             }}
           >
-            {images.map((item) => {
-              return <Image src={item} alt="bantho" />;
-            })}
+            {images.map((item, index) => (
+              <div key={index} className="min-w-full h-auto relative">
+                <Image
+                  src={item}
+                  alt={`intro-${index}`}
+                  objectFit="cover"
+                  className="w-full"
+                />
+              </div>
+            ))}
           </div>
         </div>
         <div className="absolute z-[-10] -bottom-2 h-4 bg-[#2b2f26] w-full"></div>
