@@ -25,6 +25,9 @@ module.exports = {
         "DFVN-1": ['DFVNFont1', 'sans-serif'],
         "DFVN-2": ['DFVNFont2', 'sans-serif'],
       },
+      transitionDuration: {
+        "1500": "1500ms"
+      }
     },
   },
   plugins: [],
