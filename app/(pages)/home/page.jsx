@@ -180,7 +180,7 @@ const HomePage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-3 xl:px-10">
+            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-1 sm:px-3 xl:px-10">
               <div className="relative flex justify-end md:justify-start w-full mb-3">
                 <Image
                   src={leaf1}
@@ -224,7 +224,7 @@ const HomePage = () => {
         {/* thờ phật */}
         <div className="flex flex-col w-full container">
           <div className="flex flex-col-reverse md:flex-row gap-5 md:gap-3">
-            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-3 xl:px-10">
+            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-1 sm:px-3 xl:px-10">
               <div className="relative flex justify-start translate-x-20 md:translate-x-0 w-full mb-3">
                 <Image
                   src={leaf3}
@@ -304,7 +304,7 @@ const HomePage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-3 xl:px-10">
+            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-1 sm:px-3 xl:px-10">
               <div className="relative flex justify-end md:justify-start w-full mb-3">
                 <Image
                   src={leaf1}
