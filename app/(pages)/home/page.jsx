@@ -192,14 +192,16 @@ const HomePage = () => {
                   <h1 className="tracking-wide ml-5">THỜ TỰ</h1>
                 </div>
               </div>
-              <p className="text-[#FEDC92] text-sm lg:text-lg xl:text-xl tracking-wider font-light">
+              <p className="text-[#FEDC92] text-sm lg:text-[1rem] 2xl:text-xl tracking-wider font-light">
                 Lorem ipsum dolor sit amet consectetur. Ut et sed et vitae purus
                 tincidunt vel. Ac rhoncus ultrices nisi sem. Interdum lobortis
                 odio euismod in bibendum ac tempus. Facilisi diam a urna quam
                 tortor pulvinar velit faucibus.{" "}
               </p>
               <div className="flex gap-6 items-center justify-end w-full">
-                <h1 className="md:text-md lg:text-lg md:text-xl text-[#FEDC92]">Xem thêm</h1>
+                <h1 className="md:text-md lg:text-lg md:text-xl text-[#FEDC92]">
+                  Xem thêm
+                </h1>
                 <Image src={arrow} alt="arrow" className="translate-y-0.5" />
               </div>
             </div>
@@ -234,7 +236,7 @@ const HomePage = () => {
                   <h1 className="tracking-wide ml-5">THỜ PHẬT</h1>
                 </div>
               </div>
-              <p className="text-[#FEDC92] text-sm lg:text-lg xl:text-xl tracking-wider font-light">
+              <p className="text-[#FEDC92] text-sm lg:text-[1rem] 2xl:text-xl tracking-wider font-light">
                 Lorem ipsum dolor sit amet consectetur. Ut et sed et vitae purus
                 tincidunt vel. Ac rhoncus ultrices nisi sem. Interdum lobortis
                 odio euismod in bibendum ac tempus. Facilisi diam a urna quam
@@ -314,7 +316,7 @@ const HomePage = () => {
                   <h1 className="tracking-wide ml-5">ThỜ THẦN TÀI</h1>
                 </div>
               </div>
-              <p className="text-[#FEDC92] text-sm lg:text-lg xl:text-xl tracking-wider font-light">
+              <p className="text-[#FEDC92] text-sm lg:text-[1rem] 2xl:text-xl tracking-wider font-light">
                 Lorem ipsum dolor sit amet consectetur. Ut et sed et vitae purus
                 tincidunt vel. Ac rhoncus ultrices nisi sem. Interdum lobortis
                 odio euismod in bibendum ac tempus. Facilisi diam a urna quam
@@ -338,13 +340,21 @@ const HomePage = () => {
               <div className="h-full relative">
                 <div className="absolute inset-0 flex flex-col justify-center items-center">
                   <div className="flex-[1.3] md:flex-1 flex items-end pb-2 lg:pb-4">
-                    <Image src={item.icon} alt="service" className="w-36 md:w-24 lg:w-28 xl:w-32" />
+                    <Image
+                      src={item.icon}
+                      alt="service"
+                      className="w-36 md:w-24 lg:w-28 xl:w-32"
+                    />
                   </div>
                   <h1 className="text-2xl md:text-lg lg:text-xl xl:text-3xl text-white w-1/2 break-words text-center flex-1">
                     {item.text}
                   </h1>
                 </div>
-                <img src="./assets/images/background/leaf-4.png" alt="" className="" />
+                <img
+                  src="./assets/images/background/leaf-4.png"
+                  alt=""
+                  className=""
+                />
               </div>
             );
           })}
@@ -355,7 +365,7 @@ const HomePage = () => {
       <div className="w-full h-fit relative mask-image-1 overflow-hidden">
         <img
           src="./assets/images/background/quater.png"
-          className="float-end w-[45%]"
+          className="float-end w-[43%] lg:w-[45%]"
         />
         <img
           src="./assets/images/background/sen.png"
@@ -367,9 +377,9 @@ const HomePage = () => {
         />
         <div className="container absolute bottom-0 left-1/2 -translate-x-1/2">
           <div className="flex h-full">
-            <div className="flex-1 flex flex-col justify-center gap-6 px-20">
+            <div className="flex-1 flex flex-col justify-center gap-6 lg:px-20">
               <h1 className="font-DFVN-1 text-3xl text-white">VỀ CHÚNG TÔI</h1>
-              <p className="text-[#FEDC92]">
+              <p className="text-[#FEDC92] text-sm lg:text-[1rem]">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 cupiditate atque similique tempore provident consequuntur unde
                 quis. Delectus minima molestiae beatae? Sapiente totam officiis
@@ -380,7 +390,7 @@ const HomePage = () => {
                 similique, culpa maiores.
               </p>
             </div>
-            <div className="flex-[1.5] relative">
+            <div className="md:flex-[1.3] lg:flex-[1.5] relative flex items-end">
               <img
                 src="./assets/images/background/nghenhan.png"
                 alt="nghenhan"
@@ -393,7 +403,8 @@ const HomePage = () => {
 
       {/* feedbacks */}
       <div className="w-full relative overflow-hidden">
-        <div className="absolute z-20 text-white font-DFVN-1 text-2xl md:text-3xl lg:text-4xl text-end px-20 pt-10 right-0 left-0">
+        <div className="absolute w-[40%] h-full right-0 hidden lg:block glass mask-image-1 mask-image-2 z-20"></div>
+        <div className="lg:absolute z-20 mb-7 lg:mb-0 flex flex-row lg:flex-col text-center text-white font-DFVN-1 text-xl md:text-3xl lg:text-4xl lg:text-end lg:pr-[4rem] xl:pr-[7.5rem] md:pt-10 lg:pt-20 justify-center gap-2 sm:gap-3 lg:gap-0 lg:right-0 lg:left-0">
           <h1 className="tracking-wide">PHẢN HỒI TỪ</h1>
           <h1 className="tracking-wide">KHÁCH HÀNG</h1>
         </div>
@@ -405,26 +416,26 @@ const HomePage = () => {
         >
           {carouselImages.map((item, index) => (
             <div key={index} className="min-w-full h-auto relative">
-              <div className="absolute top-0 bottom-0 right-0 w-[35%] text-white z-10 flex items-end pr-20 py-10">
-                <div className="flex flex-col gap-6 text-end">
-                  <div className="w-full flex justify-end">
-                    <Image src={arrow2} alt="arrow-2" />
-                  </div>
-                  <h1 className="font-DFVN-1 text-2xl">{item.name}</h1>
-                  <p className="text-light">{item.feedback}</p>
-                </div>
-              </div>
               <Image
                 src={item.image}
                 alt={`Slide ${index}`}
                 objectFit="cover"
-                className="w-full mask-image"
+                className="w-full mask-image mb-7 lg:mb-0"
               />
+              <div className="lg:absolute top-0 bottom-0 right-0 w-full lg:w-[35%] text-white z-10 flex items-end px-5 sm:px-10 md:px-20 lg:pr-[4rem] xl:pr-[7.5rem] lg:pb-[4rem] xl:pb-[7.5rem]">
+                <div className="flex flex-col gap-2 sm:gap-3 md:gap-6 text-end">
+                  <div className="w-full lg:flex justify-end hidden">
+                    <Image src={arrow2} alt="arrow-2" />
+                  </div>
+                  <h1 className="font-DFVN-1 text-lg lg:text-2xl text-[#FEDC92] lg:text-white">{item.name}</h1>
+                  <p className="text-light text-[0.8rem] md:text-sm">{item.feedback}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 gap-2 flex">
+        <div className="absolute lg:bottom-4 bottom-[30%] sm:bottom-[25%] left-1/2 transform -translate-x-1/2 gap-2 flex">
           {carouselImages.map((_, index) => (
             <div
               key={index}
