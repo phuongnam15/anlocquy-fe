@@ -435,11 +435,11 @@ const HomePage = () => {
           ))}
         </div>
 
-        <div className="absolute lg:bottom-4 bottom-[30%] sm:bottom-[25%] left-1/2 transform -translate-x-1/2 gap-2 flex">
+        <div className="absolute lg:bottom-4 bottom-[34%] sm:bottom-[25%] left-1/2 transform -translate-x-1/2 gap-2 flex">
           {carouselImages.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full border border-white cursor-pointer ${
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full border border-white cursor-pointer ${
                 currentSlide === index ? "bg-white" : ""
               }`}
               onClick={() => moveToSlide(index)}

@@ -21,7 +21,7 @@ const MenuSemiCircle = () => {
 
   return (
     <div
-      className={`fixed ${isShowMenu ? "right-0" : "-right-[150%]"} z-20 float-end h-full bg-rectangle bg-cover flex flex-col items-end px-8 justify-center gap-10 sm:gap-12 md:gap-16 lg:gap-18 xl:gap-19 2xl:gap-21 transition-all duration-300`}
+      className={`fixed ${isShowMenu ? "right-0" : "-right-[150%]"} z-50 float-end h-full bg-rectangle bg-cover flex flex-col items-end px-8 justify-center gap-10 sm:gap-12 md:gap-16 lg:gap-18 xl:gap-19 2xl:gap-21 transition-all duration-300`}
       style={{ width: "50vh" }}
     >
       <div
