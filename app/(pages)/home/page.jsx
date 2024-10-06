@@ -160,7 +160,7 @@ const HomePage = () => {
       <div className="gap-16 lg:gap-0 flex flex-col">
         {/* thờ tự  */}
         <div className="flex flex-col w-full container">
-          <div className="flex flex-col md:flex-row gap-10 md:gap-3">
+          <div className="flex flex-col md:flex-row gap-5 md:gap-3">
             <div className="flex-[1.5] lg:flex-[2] px-10 flex">
               <div className="relative w-full">
                 <Image
@@ -171,7 +171,7 @@ const HomePage = () => {
                 <Image
                   src={leaf2}
                   alt="leaf"
-                  className="absolute z-0 -bottom-4 lg:-bottom-6 -translate-x-[15%] w-60 lg:w-80 xl:w-96"
+                  className="absolute z-0 -bottom-2 sm:-bottom-4 lg:-bottom-6 -translate-x-[15%] w-32 sm:w-60 lg:w-80 xl:w-96"
                 />
                 <Image
                   src={cornerBottom2}
@@ -185,11 +185,11 @@ const HomePage = () => {
                 <Image
                   src={leaf1}
                   alt="leaf-1"
-                  className="w-16 h-16 lg:w-24 lg:h-24 xl:w-28 xl:h-28 -translate-x-20 md:translate-x-0"
+                  className="w-16 h-16 lg:w-24 lg:h-24 xl:w-28 xl:h-28 -translate-x-[11.5rem] md:translate-x-0"
                 />
-                <div className="flex flex-col items-center font-DFVN-1 absolute right-0 top-1/2 -translate-y-1/2 md:left-[20%] md:-translate-x-1/3 lg:left-[25%] xl:left-[32%] w-full text-white text-md md:text-lg lg:text-2xl xl:text-4xl">
+                <div className="flex flex-row md:flex-col gap-1 md:gap-0 justify-end md:justify-normal items-center font-DFVN-1 absolute right-0 top-1/2 -translate-y-1/2 md:left-[20%] md:-translate-x-1/3 lg:left-[25%] xl:left-[32%] w-full text-white text-[1.25rem] lg:text-2xl xl:text-4xl">
                   <h1 className="tracking-wide">KHÔNG GIAN</h1>
-                  <h1 className="tracking-wide ml-5">THỜ TỰ</h1>
+                  <h1 className="tracking-wide md:ml-5">THỜ TỰ</h1>
                 </div>
               </div>
               <p className="text-[#FEDC92] text-sm lg:text-[1rem] 2xl:text-xl tracking-wider font-light">
@@ -223,17 +223,17 @@ const HomePage = () => {
 
         {/* thờ phật */}
         <div className="flex flex-col w-full container">
-          <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-3">
-            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-10">
+          <div className="flex flex-col-reverse md:flex-row gap-5 md:gap-3">
+            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-3 xl:px-10">
               <div className="relative flex justify-start translate-x-20 md:translate-x-0 w-full mb-3">
                 <Image
                   src={leaf3}
                   alt="leaf-1"
                   className="w-16 h-16 lg:w-24 lg:h-24 xl:w-28 xl:h-28 -translate-x-20 md:translate-x-0"
                 />
-                <div className="flex flex-col items-center font-DFVN-1 absolute -left-11 lg:left-5 xl:-left-3 md:right-0 top-1/2 -translate-y-1/2 text-white text-md md:text-lg lg:text-3xl xl:text-4xl">
+                <div className="flex flex-row md:flex-col gap-1 md:gap-0 justify-end md:justify-normal items-center font-DFVN-1 absolute -left-11 lg:left-5 xl:-left-3 md:right-0 top-1/2 -translate-y-1/2 text-white text-[1.25rem] md:text-lg lg:text-3xl xl:text-4xl">
                   <h1 className="tracking-wide">KHÔNG GIAN</h1>
-                  <h1 className="tracking-wide ml-5">THỜ PHẬT</h1>
+                  <h1 className="tracking-wide md:ml-5">THỜ PHẬT</h1>
                 </div>
               </div>
               <p className="text-[#FEDC92] text-sm lg:text-[1rem] 2xl:text-xl tracking-wider font-light">
@@ -257,7 +257,7 @@ const HomePage = () => {
                 <Image
                   src={leaf2}
                   alt="leaf"
-                  className="absolute z-0 -top-4 lg:-top-4 right-0 translate-x-[15%] w-60 lg:w-80 xl:w-96"
+                  className="absolute z-0 -top-2 lg:-top-4 right-0 translate-x-[15%] w-36 sm:w-60 lg:w-80 xl:w-96"
                 />
                 <Image
                   src={cornerTop}
@@ -284,7 +284,7 @@ const HomePage = () => {
 
         {/* thờ thần tài  */}
         <div className="flex flex-col w-full container">
-          <div className="flex flex-col md:flex-row gap-10 md:gap-3">
+          <div className="flex flex-col md:flex-row gap-5 md:gap-3">
             <div className="flex-[1.5] lg:flex-[2] px-10 flex">
               <div className="relative w-full">
                 <Image
@@ -295,7 +295,7 @@ const HomePage = () => {
                 <Image
                   src={leaf2}
                   alt="leaf"
-                  className="absolute z-0 -bottom-4 lg:-bottom-6 -translate-x-[15%] w-60 lg:w-80 xl:w-96"
+                  className="absolute z-0 -bottom-2 sm:-bottom-4 lg:-bottom-6 -translate-x-[15%] w-32 sm:w-60 lg:w-80 xl:w-96"
                 />
                 <Image
                   src={cornerBottom2}
@@ -304,16 +304,16 @@ const HomePage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-10">
+            <div className="flex flex-col flex-1 gap-3 lg:gap-8 justify-center px-3 xl:px-10">
               <div className="relative flex justify-end md:justify-start w-full mb-3">
                 <Image
                   src={leaf1}
                   alt="leaf-1"
-                  className="w-16 h-16 lg:w-24 lg:h-24 xl:w-28 xl:h-28 -translate-x-20 md:translate-x-0"
+                  className="w-16 h-16 lg:w-24 lg:h-24 xl:w-28 xl:h-28 -translate-x-[16rem] md:translate-x-0"
                 />
-                <div className="flex flex-col items-center font-DFVN-1 w-full absolute right-0 top-1/2 -translate-y-1/2 md:left-1/4 md:-translate-x-1/3 lg:left-[34%] text-white text-md md:text-lg lg:text-3xl xl:text-4xl">
+                <div className="flex flex-row md:flex-col gap-1 md:gap-0 justify-end md:justify-normal items-center font-DFVN-1 w-full absolute right-0 top-1/2 -translate-y-1/2 md:left-1/4 md:-translate-x-1/3 lg:left-[34%] text-white text-[1.25rem] md:text-lg lg:text-3xl xl:text-4xl">
                   <h1 className="tracking-wide">KHÔNG GIAN</h1>
-                  <h1 className="tracking-wide ml-5">ThỜ THẦN TÀI</h1>
+                  <h1 className="tracking-wide md:ml-5">ThỜ THẦN TÀI</h1>
                 </div>
               </div>
               <p className="text-[#FEDC92] text-sm lg:text-[1rem] 2xl:text-xl tracking-wider font-light">
