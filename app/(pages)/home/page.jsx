@@ -362,23 +362,23 @@ const HomePage = () => {
       </div>
 
       {/* about */}
-      <div className="w-full h-fit relative mask-image-1 overflow-hidden">
+      <div className="w-full h-fit relative overflow-hidden md:mask-image-1">
         <img
           src="./assets/images/background/quater.png"
-          className="float-end w-[43%] lg:w-[45%]"
+          className="float-end w-[43%] lg:w-[45%] hidden md:block"
         />
         <img
           src="./assets/images/background/sen.png"
-          className="right-0 absolute bottom-0 w-[13rem] h-[23rem]"
+          className="right-0 absolute bottom-0 w-[4rem] h-[12rem] lg:w-[13rem] lg:h-[23rem] 2xl:w-[25rem] 2xl:h-[40rem] hidden md:block"
         />
         <img
           src="./assets/images/background/mask-2.webp"
-          className="right-0 absolute bottom-0 w-2/3 z-20 translate-y-16 translate-x-14"
+          className="right-0 absolute bottom-0 w-2/3 z-20 translate-y-16 translate-x-14 hidden md:block"
         />
-        <div className="container absolute bottom-0 left-1/2 -translate-x-1/2">
-          <div className="flex h-full">
-            <div className="flex-1 flex flex-col justify-center gap-6 lg:px-20">
-              <h1 className="font-DFVN-1 text-3xl text-white">VỀ CHÚNG TÔI</h1>
+        <div className="container relative md:absolute md:bottom-0 md:left-1/2 md:-translate-x-1/2">
+          <div className="flex flex-col-reverse md:flex-row gap-5 md:gap-0 h-full">
+            <div className="flex-1 flex flex-col justify-center gap-3 md:gap-6 lg:px-20">
+              <h1 className="font-DFVN-1 text-[1.25rem] md:text-3xl text-white">VỀ CHÚNG TÔI</h1>
               <p className="text-[#FEDC92] text-sm lg:text-[1rem]">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 cupiditate atque similique tempore provident consequuntur unde
@@ -390,11 +390,23 @@ const HomePage = () => {
                 similique, culpa maiores.
               </p>
             </div>
-            <div className="md:flex-[1.3] lg:flex-[1.5] relative flex items-end">
+            <div className="md:flex-[1.3] lg:flex-[1.5] relative flex items-end justify-end md:justify-normal">
+              <img
+                src="./assets/images/background/quater.png"
+                className="float-end w-[70%] md:hidden translate-x-[1.5rem] sm:translate-x-[4rem]"
+              />
+              <img
+                src="./assets/images/background/sen.png"
+                className="right-0 absolute bottom-0 w-[7rem] h-[12rem] translate-x-[1.5rem] sm:translate-x-[4rem] sm:w-[10rem] sm:h-[15rem] md:hidden"
+              />
+              <img
+                src="./assets/images/background/mask-2.webp"
+                className="right-0 absolute -bottom-[12%] translate-x-[15%] z-10 scale-125 md:hidden"
+              />
               <img
                 src="./assets/images/background/nghenhan.png"
                 alt="nghenhan"
-                className="mask-image-1"
+                className="w-[80%] md:w-full absolute md:static left-1/2 -translate-x-1/2 md:-translate-x-0 translate-y-2 md:translate-y-3.5"
               />
             </div>
           </div>
@@ -427,8 +439,12 @@ const HomePage = () => {
                   <div className="w-full lg:flex justify-end hidden">
                     <Image src={arrow2} alt="arrow-2" />
                   </div>
-                  <h1 className="font-DFVN-1 text-lg lg:text-2xl text-[#FEDC92] lg:text-white">{item.name}</h1>
-                  <p className="text-light text-[0.8rem] md:text-sm">{item.feedback}</p>
+                  <h1 className="font-DFVN-1 text-lg lg:text-2xl text-[#FEDC92] lg:text-white">
+                    {item.name}
+                  </h1>
+                  <p className="text-light text-[0.8rem] md:text-sm">
+                    {item.feedback}
+                  </p>
                 </div>
               </div>
             </div>

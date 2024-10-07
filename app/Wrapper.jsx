@@ -22,7 +22,7 @@ const WrapperLayout = ({ children }) => {
       {currentPath == "/" && <Introduce />}
 
       {/* main section */}
-      <div className="relative min-h-screen flex flex-col">
+      <div className="relative min-h-screen flex flex-col overflow-hidden">
         {/* background */}
         <div className="absolute z-[-10] inset-0 overflow-hidden flex flex-col w-full h-full bg-[#0F1816]">
           <div className="relative">
