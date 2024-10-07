@@ -7,7 +7,8 @@ import youtube from "../../../public/assets/images/logo/youtube.png";
 import zalo from "../../../public/assets/images/logo/zalo.png";
 import Image from "next/image";
 import CloseIcon from "../../../public/assets/images/icon/delete.png";
-import { useMenuSemiCircleContext } from "@/app/(contexts)/menuSemiCircle";
+import { useSidebarSemiCircleContext } from "@/app/(contexts)/sidebarSemiCircle";
+import { useRouter } from "next/navigation";
 
 const socialIcons = [
   { icon: facebook, name: "facebook-icon" },
@@ -16,35 +17,60 @@ const socialIcons = [
   { icon: zalo, name: "zalo-icon" },
 ];
 
-const MenuSemiCircle = () => {
-  const { isShowMenu, setIsShowMenu } = useMenuSemiCircleContext();
+const listRoute = [
+  {
+    title: "Trang chủ",
+    href: "/",
+  },
+  {
+    title: "Giới thiệu An Lộc Quý",
+    href: "/about",
+  },
+  {
+    title: "Cửa hàng",
+    href: "/store",
+  },
+  {
+    title: "Bài viết",
+    href: "/post",
+  },
+  {
+    title: "Liên hệ",
+    href: "/contact",
+  },
+];
+
+const SidebarSemiCircle = () => {
+  const { isShowSidebar, setIsShowSidebar } = useSidebarSemiCircleContext();
+  const router = useRouter();
 
   return (
     <div
-      className={`fixed ${isShowMenu ? "right-0" : "-right-[150%]"} z-50 float-end h-full bg-rectangle bg-cover flex flex-col items-end px-8 justify-center gap-10 sm:gap-12 md:gap-16 lg:gap-18 xl:gap-19 2xl:gap-21 transition-all duration-300`}
+      className={`fixed ${
+        isShowSidebar ? "right-0" : "-right-[150%]"
+      } z-50 float-end h-full bg-rectangle bg-cover flex flex-col items-end px-8 justify-center gap-10 sm:gap-12 md:gap-16 lg:gap-18 xl:gap-19 2xl:gap-21 transition-all duration-300`}
       style={{ width: "50vh" }}
     >
       <div
         className="flex text-white justify-center items-center gap-4 relative group cursor-pointer"
-        onClick={() => setIsShowMenu(false)}
+        onClick={() => setIsShowSidebar(false)}
       >
         <button className="font-light text-md sm:text-lg">Thoát</button>
-        <Image src={CloseIcon} alt="delete-icon" className="w-4 h-4 sm:w-6 sm:h-6" />
+        <Image
+          src={CloseIcon}
+          alt="delete-icon"
+          className="w-4 h-4 sm:w-6 sm:h-6"
+        />
         <span className="absolute -bottom-1 w-full border-t border-white scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
       </div>
       <ul className="flex flex-col items-end text-white text-2xl 2xl:text-3xl font-light gap-3 md:gap-5 lg:gap-6 xl:gap-7 2xl:gap-3">
-        {[
-          "Trang chủ",
-          "Giới thiệu An Lộc Quý",
-          "Cửa hàng",
-          "Bài viết",
-          "Liên hệ",
-        ].map((item, index) => (
+        {listRoute.map((item, index) => (
           <li
             key={index}
             className="relative group hover:text-[#FEDC92] cursor-pointer hover:font-medium transition-all duration-75"
+            onClick={() => router.push(item.href)}
           >
-            <p className="mb-2">{item}</p>
+            <p className="mb-2">{item.title}</p>
             <span className="absolute left-0 bottom-0 w-full h-1 border-t border-[#FEDC92] scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
         ))}
@@ -83,4 +109,4 @@ const MenuSemiCircle = () => {
   );
 };
 
-export default MenuSemiCircle;
+export default SidebarSemiCircle;

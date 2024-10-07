@@ -3,11 +3,11 @@
 import Image from "next/image";
 import logo1 from "../../../public/assets/images/logo/ALQ_Logo-011.png";
 import { Search, ShoppingCart, Menu } from "lucide-react";
-import { useMenuSemiCircleContext } from "@/app/(contexts)/menuSemiCircle";
+import { useSidebarSemiCircleContext } from "@/app/(contexts)/sidebarSemiCircle";
 import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
-  const { setIsShowMenu } = useMenuSemiCircleContext();
+  const { setIsShowSidebar } = useSidebarSemiCircleContext();
   const [isSearchActive, setIsSearchActive] = useState(false);
   const searchRef = useRef(null);
 
@@ -63,7 +63,7 @@ const Header = () => {
           <ShoppingCart className="w-6 h-6 md:w-8 md:h-8 cursor-pointer" />
           <Menu
             className="w-6 h-6 md:w-8 md:h-8 cursor-pointer"
-            onClick={() => setIsShowMenu(true)}
+            onClick={() => setIsShowSidebar(true)}
           />
         </div>
       </div>

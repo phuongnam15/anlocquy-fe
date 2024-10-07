@@ -2,11 +2,11 @@
 
 import Footer from "./(components)/footer/Footer";
 import Header from "./(components)/header/Header";
-import MenuSemiCircle from "./(components)/menu/MenuSemiCircle";
+import SidebarSemiCircle from "./(components)/sidebar/SidebarSemiCircle";
 import "./globals.css";
 import Image from "next/image";
 import bg1 from "../public/assets/images/background/bg1.png";
-import { MenuSemiCircleContextProvider } from "./(contexts)/menuSemiCircle";
+import { SidebarSemiCircleContextProvider } from "./(contexts)/sidebarSemiCircle";
 import bantho from "../public/assets/images/intro/bantho.png";
 import Introduce from "./(components)/introduce/Introduce";
 
@@ -15,8 +15,8 @@ const WrapperLayout = ({ children }) => {
 
   return (
     <div>
-      {/* menu */}
-      <MenuSemiCircle />
+      {/* sidebar */}
+      <SidebarSemiCircle />
 
       {/* introduce */}
       {currentPath == "/" && <Introduce />}
@@ -45,9 +45,9 @@ const WrapperLayout = ({ children }) => {
 
 const Wrapper = ({ children }) => {
   return (
-    <MenuSemiCircleContextProvider>
+    <SidebarSemiCircleContextProvider>
       <WrapperLayout>{children}</WrapperLayout>
-    </MenuSemiCircleContextProvider>
+    </SidebarSemiCircleContextProvider>
   );
 };
 
