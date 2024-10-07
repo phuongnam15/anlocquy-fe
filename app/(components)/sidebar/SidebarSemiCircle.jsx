@@ -44,6 +44,11 @@ const SidebarSemiCircle = () => {
   const { isShowSidebar, setIsShowSidebar } = useSidebarSemiCircleContext();
   const router = useRouter();
 
+  const handleNavigate = (href) => {
+    router.push(href);
+    setIsShowSidebar(!isShowSidebar);
+  };
+
   return (
     <div
       className={`fixed ${
@@ -68,7 +73,7 @@ const SidebarSemiCircle = () => {
           <li
             key={index}
             className="relative group hover:text-[#FEDC92] cursor-pointer hover:font-medium transition-all duration-75"
-            onClick={() => router.push(item.href)}
+            onClick={() => handleNavigate(item.href)}
           >
             <p className="mb-2">{item.title}</p>
             <span className="absolute left-0 bottom-0 w-full h-1 border-t border-[#FEDC92] scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>

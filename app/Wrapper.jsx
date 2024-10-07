@@ -7,11 +7,11 @@ import "./globals.css";
 import Image from "next/image";
 import bg1 from "../public/assets/images/background/bg1.png";
 import { SidebarSemiCircleContextProvider } from "./(contexts)/sidebarSemiCircle";
-import bantho from "../public/assets/images/intro/bantho.png";
 import Introduce from "./(components)/introduce/Introduce";
+import { usePathname } from 'next/navigation'
 
 const WrapperLayout = ({ children }) => {
-  const currentPath = window.location.pathname;
+  const pathname = usePathname()
 
   return (
     <div>
@@ -19,7 +19,7 @@ const WrapperLayout = ({ children }) => {
       <SidebarSemiCircle />
 
       {/* introduce */}
-      {currentPath == "/" && <Introduce />}
+      {pathname == "/" && <Introduce />}
 
       {/* main section */}
       <div className="relative min-h-screen flex flex-col overflow-hidden">
@@ -34,7 +34,7 @@ const WrapperLayout = ({ children }) => {
 
         {/* content */}
         <div className="flex flex-col flex-grow pt-10">
-          {currentPath != "/" && <Header />}
+          {pathname != "/" && <Header />}
           <main className="flex-1 py-20">{children}</main>
           <Footer />
         </div>
